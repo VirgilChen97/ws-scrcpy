@@ -2,7 +2,7 @@
 FROM node:21-alpine
 
 # 安装 ADB
-RUN apk --no-cache add android-tools
+RUN apk --no-cache add android-tools make
 
 # 设置工作目录
 WORKDIR /app
