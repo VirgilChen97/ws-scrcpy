@@ -1,6 +1,10 @@
 # 使用 Node.js 14 作为基础镜像
 FROM node:14
 
+# 安装 ADB
+RUN apt-get update && \
+    apt-get install -y android-tools-adb
+
 # 设置工作目录
 WORKDIR /app
 
@@ -11,7 +15,7 @@ COPY dist/ .
 RUN npm install
 
 # 暴露应用程序使用的端口（如果有需要）
-EXPOSE 7932
+EXPOSE 7923
 
 # 运行应用程序
 CMD ["node", "index.js"]
