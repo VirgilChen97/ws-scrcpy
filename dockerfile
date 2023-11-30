@@ -1,5 +1,5 @@
 # 使用 Node.js 14 作为基础镜像
-FROM node:14
+FROM node:21
 
 # 安装 ADB
 RUN apt-get update && \
