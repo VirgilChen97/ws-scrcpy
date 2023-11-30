@@ -28,5 +28,5 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t virgilchen97/ws-scrcpy:latest .
-        docker push virgilchen97/ws-scrcpy:latest
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/ws-scrcpy:latest .
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/ws-scrcpy:latest
