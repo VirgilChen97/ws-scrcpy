@@ -1,9 +1,8 @@
-# 使用 Node.js 14 作为基础镜像
-FROM node:21
+# 使用 Node.js 21 作为基础镜像
+FROM node:21-alpine
 
 # 安装 ADB
-RUN apt-get update && \
-    apt-get install -y android-tools-adb
+RUN apk --no-cache add android-tools
 
 # 设置工作目录
 WORKDIR /app
